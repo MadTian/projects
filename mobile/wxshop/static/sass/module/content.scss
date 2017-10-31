@@ -1,0 +1,131 @@
+@charset "utf-8";
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+// generic transform
+@mixin transform($transforms) {
+       -moz-transform: $transforms;
+         -o-transform: $transforms;
+        -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+          transform: $transforms;
+}
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+/*小三角颜色变化*/
+$list: #1AA818 #D50806 #FF7301;
+$len: length($list);
+
+/*商品列表 S*/
+#prolist{
+  position: relative;
+  top: 60px;
+  left: 0;
+  width: 99%;
+  margin: 0 auto 5px auto;
+  overflow:hidden;
+  ul{
+    width: 100%;
+    li{
+      position: relative;
+      min-height: 125px;
+      overflow: hidden;
+      background-color: #fff;
+      -webkit-box-shadow: 0 0 5px #ccc;
+      -moz-box-shadow: 0 0 5px #ccc;
+      box-shadow: 0 0 5px #ccc;
+      border: 1px solid #f2f2f2;
+      margin: 10px;
+      a{
+        display: block;
+        width: 100%;
+        overflow:hidden;
+        display:-webkit-flex;
+        display:flex;
+        @at-root .promotion-img{
+          -webkit-flex:4;
+          flex:4;
+          overflow:hidden;
+          padding: 5px 0;
+          text-align:center;
+          // img{
+          //     width: 100px;
+          //     height:100px;
+          // }
+          canvas{
+            width: 100px;
+            min-height:100px;
+            background: #fff url(../images/loading.gif) center center no-repeat;
+            background-size: 15px auto;
+          }
+        }
+        @at-root .production-des{
+          -webkit-flex:6;
+          flex:6;
+          padding: 18px 0;
+          .title{
+            font-size: 16px;
+            color: #4a534e;
+            font-weight: bold;
+            font-family: "Microsoft YaHei";
+          }
+          .pro-intro{
+            font-size: 13px;
+            color: #999;
+            margin-top: 5px;
+          }
+          .price{
+            margin-top: 10px;
+            font-size:14px;
+            color: #4a4a4a;
+            span{
+              font-weight: bold;
+              color: #00b500;
+            }
+          }
+        }
+        @at-root .promotion-word{
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 60px;
+          height: 60px;
+          /*小三角*/
+          .triangle{
+            position: absolute;
+            z-index: 990;
+            width: 0;
+            height: 0;
+            border-top:60px solid #1aa818; 
+            border-right: 60px solid transparent;
+          }
+          .pro-word{
+              position: absolute;
+              left: 3px;
+              top: 12px;
+              z-index: 991;
+              color: #fff;
+              font-size: 14px;
+              @include rotate(-45);
+              cursor: pointer;
+          }
+        }
+      }
+     
+    }
+      
+  }
+  
+}
+@for $i from 1 through $len{
+  .promotion-word .triangle#{$i}{
+    border-top-color: nth($list,$i);
+  }
+}
+/*商品列表 E*/

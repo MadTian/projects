@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- 设置视口标签 在iPhone的浏览器中页面将以原始大小显示，并不允许缩放 -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+  <!-- 删除默认的苹果工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- "添加到主屏幕“后，全屏显示 -->
+  <meta name="apple-touch-fullscreen" content="yes"  />
+  <!-- 控制状态栏显示样式 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <!-- 忽略数字自动识别为电话号码 -->
+  <meta name="format-detection" content="telephone=no">
+  <title>移动端前端项目-wxshop</title>
+  <!-- 设置web app的放置主屏幕上icon文件路径 -->
+  <link rel="apple-touch-icon-precomposed" href="images/haoroomsicon.jpg" />
+  <!-- 设置启动时候的界面 -->
+  <link rel="apple-touch-startup-image" href="images/haoroomsicon.jpg" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+</head>
+<body>
+  <!-- nav S -->
+  <nav class="nav">
+    <ul class="navlist">
+      <li id="n_0"><a href="index.html"><span class="active"></span></a></li>
+      <li id="n_1"><a href="cart.html"><span></span></a></li>
+      <li id="n_2"><a href="productlist.html"><span></span></a></li>
+      <li id="n_3"><a href="usercenter.html"><span></span></a></li>
+    </ul>
+  </nav>
+  <!-- nav E -->
+
+  <!-- slider S -->
+  <section class="index-slider">
+      <div class="swiper-container" id="topSlider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/sliderbanner/1.jpg">
+              <!-- 遮罩 S-->
+              <div class="top-masks">
+                <div class="leftslidecontent">
+                  <p>微信价<span>500元</span></p>
+                  <p>这里是简单地描述吧这里是简单地描述吧这里是简单地描述吧</p>
+                </div>
+                <a href="cart.html">立即购买</a>
+              </div>
+            </div>
+            <div class="swiper-slide"><img src="images/sliderbanner/4.jpg">
+              <div class="top-masks">
+                <div class="leftslidecontent">
+                  <p>微信价<span>1000元</span></p>
+                  <p>这里是简单地描述吧这里是简单地描述吧这里是简单地描述吧</p>
+                </div>
+                <a href="cart.html">立即购买</a>
+              </div>
+            </div>
+            <div class="swiper-slide"><img src="images/sliderbanner/3.jpg">
+              <div class="top-masks">
+                <div class="leftslidecontent">
+                  <p>微信价<span>50元</span></p>
+                  <p>这里是简单地描述吧这里是简单地描述吧这里是简单地描述吧</p>
+                </div>
+                <a href="cart.html">立即购买</a>
+              </div>
+            </div>
+            <div class="swiper-slide"><img src="images/sliderbanner/6.jpg">
+              <div class="top-masks">
+                <div class="leftslidecontent">
+                  <p>微信价<span>600元</span></p>
+                  <p>这里是简单地描述吧这里是简单地描述吧这里是简单地描述吧</p>
+                </div>
+                <a href="cart.html">立即购买</a>
+              </div>
+            </div>
+            
+          </div>
+      </div>
+  </section>
+  <!-- slider E -->
+
+  <!-- 商品列表 S -->
+  <section id="prolist">
+    <ul id="">
+      <li>
+        <a href="productlist.html">
+          <div class="promotion-word">
+            <span class="triangle triangle1"></span>
+            <span class="pro-word word01">专属</span>
+          </div> 
+          <div class="promotion-img fl">
+            <!-- <img src="images/product/product1.png" alt="微商城专属商品" /> -->
+            <canvas data-src="images/product/product1.png"></canvas>
+          </div>
+          <div class="production-des fr">
+            <p class="title">广联达变更算量</p class="title">
+            <p class="pro-intro">简介这里简介这里简介这里简介这里简介这里简介这里简介这里简介介这里简介</p>
+            <p class="price">
+              价格:<span>￥5000</span>
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="productlist.html">
+          <div class="promotion-word">
+            <span class="triangle triangle2"></span>
+            <span class="pro-word word02">热销</span>
+          </div> 
+          <div class="promotion-img fl">
+            <!-- <img src="images/product/product1.png" alt="微商城专属商品" /> -->
+            <canvas data-src="images/product/product1.png"></canvas>
+          </div>
+          <div class="production-des fr">
+            <p class="title">广联达变更算量</p class="title">
+            <p class="pro-intro">简介这里简介这里简介这里简介这里简介这里简介这里简介这里简介介这里简介</p>
+            <p class="price">
+              价格:<span>￥5000</span>
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="productlist.html">
+          <div class="promotion-word">
+            <span class="triangle triangle3"></span>
+            <span class="pro-word">限购</span>
+          </div> 
+          <div class="promotion-img fl">
+            <!-- <img src="images/product/product1.png" alt="微商城专属商品" /> -->
+            <canvas data-src="images/product/product1.png"></canvas>
+          </div>
+          <div class="production-des fr">
+            <p class="title">广联达变更算量</p class="title">
+            <p class="pro-intro">简介这里简介这里简介这里简介这里简介这里简介这里简介这里简介介这里简介</p>
+            <p class="price">
+              价格:<span>￥5000</span>
+            </p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <!-- 商品列表 E -->
+
+<script src="script/libs/require.js"  data-main="script/views/enterjs/mainconfig"></script>
+
+</body>
+</html>

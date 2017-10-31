@@ -1,0 +1,20 @@
+$blue:#898767;
+div{
+  color: $blue;
+  .nav{
+    li{
+      font-size: 12px;
+      a{
+        &:hover{
+          color: red;
+        }
+      }
+    }
+  }
+}
+.class1{
+  color: $blue;
+}
+.class2{
+  @extend .class1;
+}

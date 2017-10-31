@@ -1,0 +1,15 @@
+div {
+  color: #898767;
+}
+div .nav li {
+  font-size: 12px;
+}
+div .nav li a:hover {
+  color: red;
+}
+
+.class1, .class2 {
+  color: #898767;
+}
+
+/*# sourceMappingURL=test.css.map */

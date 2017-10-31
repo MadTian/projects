@@ -1,0 +1,67 @@
+自适应企业官网首页
+1，使用Bootstrap版本号：v3.3.7
+2，使用开发工具：webstrom8.0.4
+选中相同的词：Alt+J
+
+3，必做的几件事：
+
+1) IE8开启标准渲染模式：
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+2) 配置视窗：移动优先
+<meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+3) 引入jQuery文件
+
+4) 引入bootstrap CSS样式文件和js文件
+
+4,CSS文件声明顺序
+相关的属性声明应当归为一组，并按照下面的顺序排列：
+a,Positioning-定位
+b,Box model-盒模型: 例：（display:block）,(width:),(height:),(float:)
+c,Typographic-字体格式
+d,Visual-视觉：例:background,border-color,border-radius
+
+5,问题解决及书写技巧：
+第一屏：首页制作
+1）网站图标--favicon.ico
+2）点击 navbar-toggle按钮，无法弹出navbar-collapse 下拉菜单
+存在问题：div.navbar-toggle的属性data-target=".navbar-collapse”，勿忘点“.”
+3）因为导航条navbar固定定位，会遮住各模块部分内容，所有每屏需设置margin-top：70px
+3）首页背景--滤镜层
+4）内容居中显示：col-md-1, col-md-10, col-md-1
+5)图片自适应：添加类名【class="img-responsive"】
+
+第2屏： 论坛
+第3、4屏： 前端开发：
+类名写错，每个应各占6份(col-md-6)，写成了4份(col-md-4)，导致无法居中显示。
+第5屏：最新课程
+技巧及注意点：
+1）超链接加类名 btn btn-primary 以及属性role= 赋予按钮的特性
+2）图片超出盒子，添加类名，使其自适应：img-responsive
+3）字体悬停颜色过渡动画效果
+
+第6屏：移动App 
+button按钮padding设置，更好的适应小屏设备
+
+第7屏：联系我们
+1 )想要textarea中的提示语起作用（placeholder）,textarea标签不要留有空格，写于一行
+2）左右两边对齐,视觉效果更好，设置h2的margin-top:0;
+3）栅格系统：嵌套列
+4）初始为#contact设置的高度值记得删除，否则无法自适应--小屏幕设备会造成尾部区域与其部分内容重叠。
+
+尾部区域：
+1）col-md-12
+
+网站优化-满意的效果插件：
+1-jquery.singlePageNav.min.js：单页面导航插件 可使页面跳转平滑过渡
+2-动画集插件：animate.css+wow.min.js两个一起引入
+使用技巧：
+a,引入animate动画集CSS插件animate.css
+b,引入wow.min.js
+c,使用 js:new WOW().init();使用对象添加class="wow + animate"
+d,可用属性:
+  data-wow-duration（动画持续时间）;
+  data-wow-delay（动画延迟时间）;
+  data-wow-offset（偏移量）; //距离可视区域多远开始执行动画
+  data-wow-iteration="10"(重复次数)
+

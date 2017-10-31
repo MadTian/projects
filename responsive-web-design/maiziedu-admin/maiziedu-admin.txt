@@ -1,0 +1,55 @@
+Maizi Admin后台管理制作笔记：
+webstorm快捷键：
+a, 复制一行---ctrl+d
+b,环绕标签---ctrl+alt+t
+
+所有Bootstrap资料来源于：http://v3.bootcss.com/
+
+一、后台首页--index.html
+1）导航区域：admin下拉菜单，JavaScript插件选择合适的下拉菜单复制代码并根据需要做相应修改即可。
+
+2）警示框：
+JavaScript插件--警告框的应用
+
+3）网站统计数据：组件--面板+全局CSS样式--表格（鼠标悬停）
+
+网站热帖：组件-列表组 ul.list-group;li.list-group-item
+时间右对齐：<small class="pull-right">2015/08/08</small>
+
+原网站存在问题：网站统计数据与网站热帖底部未对齐，改进方式:
+修改CSS之padding: 20px 15px;
+
+4）访客统计表-Chart.js插件：
+  a,引入chart.js
+  b,创建一个canvas画布
+  c,引入曲线图（Line chart）js格式代码--script.js
+服务器状态：组件-进度条（条纹效果）
+
+5）团队留言板：组件-面板+媒体对象
+组合使用类名：media-right text-right 顺序更改；
+添加类名well，使背景变灰，使其与内容区别开
+
+二、用户管理--user_list.html 页面：栅格系统 col-md-2+col-md-10
+1）左侧列表组：组件-列表组；
+2）右侧标题<用户管理>：组件-页头（.page-header）；
+    用户列表：组件-导航--标签页；
+    表格：全局CSS样式-表格；
+    操作：组件--按钮式下拉菜单-单按钮下拉菜单
+    页码：组件-分页+类名：pull-right
+
+用户搜索--user_search.html页面：栅格系统 col-md-2+col-md-10
+1）左侧同用户管理页面；
+2）右侧表单包括内容：
+a,组件--警告框(class="alert alert-info" role="alert");
+b,组件-表单
+
+添加用户写在--user_list.html即可：
+比照JavaScript插件--模态框中的实例增删类名、属性以及内容即可
+
+三、内容管理页面之内容管理--content.html与用户管理页面类似，左侧列表组导航链接地址勿忘修改；右侧：页头+nav-tabs+table
+内容管理页面之添加内容--article_post.html
+
+四、标签管理页面--tag.html
+页头+.pad0+警告框（组件）、.alert-info、.pad_t15
+
+推荐模板：bootswatch

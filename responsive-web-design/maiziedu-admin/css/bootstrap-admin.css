@@ -1,0 +1,70 @@
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+}
+.grain {
+    width: 40px;
+    height: 40px;
+    background: rgb(64, 210, 177);
+    border-radius: 50%;
+    margin-right: 20px;
+    text-align: center;
+    color: #fff;
+    line-height: 40px;
+}
+/*网站热帖 S*/
+.maizi-info .panel-body {
+    padding: 20px 15px;
+}
+/*网站热帖 E*/
+
+/*留言板 S*/
+.wh64 {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+.mt15 {
+    margin-top: 15px;
+}
+.ptb12{
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+/*留言板 E*/
+
+/*user_list.html页面*/
+
+/*用户管理 S*/
+.font_s16 {
+    margin: 0;
+    font-size: 16px;
+}
+/*用户管理 E*/
+
+/*用户搜索--表格样式*/
+.search_form {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-top: 0 none;
+}
+
+/*外边距*/
+.mar_t15 {
+    margin-top: 15px;
+}
+/*内边距*/
+.pad0 {
+    padding: 0;
+}
+.pad_t15 {
+    padding-top: 15px;
+}
+.pad_t15 .pull-left {
+    margin: 0 15px 15px 0;
+}
+/*footer底部区域制作 S*/
+footer {
+    padding: 20px;
+    text-align: center;
+}
+/*footer底部区域制作 E*/

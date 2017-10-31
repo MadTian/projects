@@ -1,0 +1,229 @@
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+}
+
+/*导航 S*/
+.navbar-default {
+    background-color: #fff;
+    border: none;
+    box-shadow: 0px 2px 8px 0px rgba(50,50,50,0.25);
+}
+.navbar-default .navbar-brand {
+    font-weight: bold;
+    font-size:30px;
+    color:#40d2b1;
+    height: 70px;
+    line-height: 35px;
+}
+.navbar-toggle {
+    margin-top: 18px;
+}
+.navbar-default .navbar-toggle:hover {
+    background-color: rgb(69,210,184);
+    border-color:#40D2B1;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #1C9982;
+}
+.navbar-default .navbar-nav>li>a {
+    font-weight: bold;
+    font-size: 16px;
+    color: #666;
+    height: 70px;
+    line-height: 35px;
+}
+/*导航 E*/
+
+/*第1屏：首页  S*/
+#home {
+    width: 100%;
+    margin-top: 70px;
+    color: #fff;
+    text-align: center;
+    background: url(../images/home-bg.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.filter {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: rgba(0,0,0,0.7);
+    padding: 90px 0;
+}
+#home h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    margin-top: 0;
+}
+#home p {
+    line-height: 34px;
+    margin-bottom: 40px;
+}
+#home img {
+    display: inline-block;
+}
+/*第1屏：首页  E*/
+
+/*第2屏：论坛 S*/
+#bbs {
+    padding: 80px 0;
+    text-align: center;
+}
+#bbs .col-md-4 {
+    padding: 15px;
+}
+#bbs .col-md-4:hover {
+    background-color: #f1f1f1;
+}
+#bbs a {
+    text-decoration: none;
+    color: #212121;
+}
+#bbs img {
+    margin: 0 auto;
+}
+#bbs h3 {
+    color: #212121;
+    font-weight: bold;
+}
+#bbs p {
+    line-height: 40px;
+}
+/*第2屏：论坛 E*/
+
+/*第3、4屏：前端开发+最新课程 S*/
+#h5,#bstrap {
+    padding: 80px 0;
+    background-color: #f8f8F8;
+}
+#bstrap {
+    background-color: #fff;
+}
+#h5 h2,#bstrap h2 {
+    font-weight: bold;
+}
+#h5 p {
+    line-height: 40px;
+}
+#bstrap p {
+    line-height: 25px;
+}
+.grain {
+    width: 40px;
+    height: 40px;
+    background: rgb(64, 210, 177);
+    border-radius: 50%;
+    margin-right: 20px;
+    text-align: center;
+    color: #fff;
+    line-height: 40px;
+}
+/*第3、4屏：前端开发+最新课程 E*/
+
+/*第5屏：最新课程 S*/
+#course {
+    padding: 80px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+#course h2 {
+    font-weight: bold;
+    padding-bottom: 60px;
+}
+#course .col-md-3 {
+    margin-bottom: 20px;
+}
+#course .course {
+    background-color: #fff;
+}
+#course a.btn {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 8px 40px;
+    color: #40d2b1;
+    background: transparent;
+    border: 1px solid #40d2b1;
+    border-radius: 0px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+#course a.btn:hover {
+    color: #fff;
+    background-color: #40d2b1;
+}
+/*第5屏：最新课程 E*/
+
+/*第6屏：移动APP S*/
+#app {
+    padding: 80px 0;
+}
+#app h2 {
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+#app button {
+    margin: 10px 0;
+    padding: 6px 30px;
+    color: #fff;
+    background: #40d2b1;
+    border: 1px solid #40d2b1;
+    border-radius: 0px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+#app button:hover {
+    background-color: #2c8e78;
+}
+/*第6屏：移动APP E*/
+
+/*第7屏：联系我们 S*/
+#contact {
+    background: url("../images/contact-bg.png") no-repeat 0 0;
+    /*height: 600px;*/
+}
+#contact h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+#contact p {
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+#contact .form-control {
+    height: 50px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 0;
+}
+#contact textarea.form-control {
+    height: auto;
+}
+#contact input[type="submit"] {
+    color:#fff;
+    background-color: #40d2b1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+  #contact input[type="submit"]:hover {
+      background-color: #2c8e78;
+  }
+/*第7屏：联系我们 E*/
+
+/*footer底部区域制作 S*/
+footer {
+    padding: 20px;
+    text-align: center;
+}
+/*footer底部区域制作 E*/

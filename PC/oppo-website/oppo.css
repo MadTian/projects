@@ -1,0 +1,147 @@
+*{
+    margin:0; padding:0; border:0; list-style:none;
+}
+body{
+    background-color: #F2F2F2;
+    overflow-x: hidden;
+}
+header{
+    height: 125px;
+    background: url(images/hd.png) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.banner{
+    height: 622px;
+    background: url(images/slide.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.item1Title{
+    height: 130px;
+    margin-bottom: 35px;
+    background: url(images/h2-1.png) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.item1{
+    height: 565px;
+    background: url(images/bg1.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    margin-bottom: 50px;
+}
+.item2Title{
+    height: 140px;
+    background: url(images/h2-2.png) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.item2{
+    position: relative;
+    width: 1180px;
+    height: 880px;
+    margin: 0 auto;
+}
+.list1{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.list2{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.list3{
+    position: absolute;
+    top: 0;
+    left: 300px;
+}
+.list4{
+    position: absolute;
+    left: 300px;
+    top: 300px;
+}
+.list5{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.list6{
+    position: absolute;
+    right: 300px;
+    top: 300px;
+}
+.list7{
+    position: absolute;
+    right: 0;
+    top: 300px;
+}
+.list8{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.item3Title{
+    height: 130px;
+    background: url(images/h2-3.png) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.item3{
+    height: 560px;
+    width: 1180px;
+    margin: 0 auto 60px;
+    padding-right: 380px;
+    box-sizing:border-box;
+    position: relative;
+}
+.item3 img{
+    float: left;
+    margin: 0 20px 20px 0;
+}
+.item3 .area3,.item3 .area4{
+    margin-bottom: 0;
+}
+.item3 .area5{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+}
+
+.list{
+    width: 1180px;
+    height: 125px;
+    margin: 0 auto;
+}
+.list li{
+    width: 236px;
+    height: 125px;
+    float: left;
+    background: url(images/ft-service.png);
+}
+.list li:nth-child(2){
+    background-position: -236px 0;
+}
+.list li:nth-child(3){
+    background-position: -472px 0;
+}
+.list li:nth-child(4){
+    background-position: -708px 0;
+}
+.list li:nth-child(5){
+    background-position: -945px 0;
+}
+.container{
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+}
+footer{
+    height: 316px;
+    background: url(images/ft-links.png) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}

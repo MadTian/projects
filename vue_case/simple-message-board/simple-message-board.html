@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>简易留言板</title>
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css" />
+  <script type="text/javascript" src="lib/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="lib/bootstrap.min.js"></script>
+  <script type="text/javascript" src="vue.js"></script>
+  <script type="text/javascript">
+    window.onload=function(){
+      new Vue({
+        el: '#box',
+        data: {
+          // 只要是数据就要在data里面有所体现
+          myData: [// {name:'xxx',age:'xxx'}
+          ],
+          username:'',
+          age:'',
+          nowIndex:-100
+        },
+        methods:{
+          // 添加 按钮
+          add:function(){
+            // alert(1);
+            this.myData.push({
+              name:this.username,
+              age:this.age
+            });
+            this.username="";
+            this.age="";
+          },
+          deleteMsg:function(n){
+            // alert(1);
+            if(n==-2){
+              this.myData=[];
+            }else{
+              this.myData.splice(n,1);  //n代表删除项目的位置，1表示删除的数目
+            }
+            
+          }
+        }
+      });
+    }
+  </script>
+</head>
+<body>
+
+  <div class="container" id="box" style="margin-top:10px">
+    <form>
+      <div class="form-group">
+        <label for="username">用户名：</label>
+        <input type="text" class="form-control" id="username" placeholder="输入用户名" v-model="username">
+      </div>
+      <div class="form-group">
+        <label for="age">年龄：</label>
+        <input type="text" class="form-control" id="age" placeholder="输入年龄" v-model="age">
+      </div>
+      <div class="form-group">
+        <input type="button" value="添加" class="btn btn-primary" v-on:click="add()">
+        <input type="reset" value="重置" class="btn btn-danger">
+      </div>
+    </form>
+    <hr />
+    <table class="table table-bordered table-hover">
+        <caption class="h3 text-info text-center">用户信息表</caption>
+        <tr class="text-danger">
+            <th class="text-center">序号</th>
+            <th class="text-center">名字</th>
+            <th class="text-center">年龄</th>
+            <th class="text-center">操作</th>
+        </tr>
+        <tr class="text-center" v-for="items in myData">
+            <td>{{$index+1}}</td>
+            <td>{{items.name}}</td>
+            <td>{{items.age}}</td>
+            <td>
+                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal"  v-on:click="nowIndex=$index">删除</button>
+            </td>
+        </tr>
+        <!-- <tr class="text-center">
+            <td>1</td>
+            <td>strive</td>
+            <td>16</td>
+            <td>
+                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">删除</button>
+            </td>
+        </tr> -->
+        <tr v-show="myData.length!=0">
+            <td colspan="4" class="text-right">
+                <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal" v-on:click="nowIndex=-2">删除全部</button>
+            </td>
+        </tr>
+        <tr  v-show="myData.length==0">
+            <td colspan="4" class="text-center text-muted">
+                <p>暂无数据....</p>
+            </td>
+        </tr>
+    </table>
+
+    <!-- 模态框 S-->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" data-dismiss="modal">
+              <!-- &times;表示关闭符号 -->
+              <span>&times;</span>
+            </button>
+            <h4 class="modal-title">确认删除么？</h4>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary btn-sm" data-dismiss="modal">取消</button>
+            <button class="btn btn-danger btn-sm" data-dismiss="modal" v-on:click="deleteMsg(nowIndex)">确认</button>
+          </div>
+        </div>
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+  </div>
+</body>
+</html>

@@ -1,0 +1,392 @@
+/* @Author: Tina Zhang */
+
+/* CSS Document */
+html,body,ul,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,input,button,fieldset, legend,img { 
+    margin:0; 
+    padding:0; 
+    box-sizing: border-box;
+}
+*{ 
+    margin:0; 
+    padding:0; 
+}
+body{
+    background:#fff;
+    font:12px/1.5 "Helvetica Neue",Helvetica,tahoma,Arial,\5FAE\8F6F\96C5\9ED1;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight:normal;
+}
+fieldset,img{ 
+    border:0 none; 
+}
+img{ 
+    display:block; 
+    border: 0 none;
+}
+em{ 
+    font-style:normal;
+}
+ul,ol{ 
+    list-style:none; 
+}
+a{ 
+    
+    color:#655; 
+    text-decoration:none;
+}
+a:hover{
+    color:#d3483c;
+}
+input,button{
+    border:0 none;
+    outline: 0 none;
+}
+.clearfix:after{ 
+    content:""; display:block; 
+    clear:both;
+}
+.clearfix{ 
+    zoom:1;
+}
+/*版心定义*/
+.container{ 
+    width:980px;
+    margin:0 auto;
+    position:relative;
+}
+
+/*sprites01公用*/
+.headerRight .login,.logoBg .logo, .searchArea button,.myZone .mySub,.myZone .myShelf,.scrollIn h2 a{
+    background: url(../images/spirites01.png) -9999px -9999px no-repeat;
+}
+/*sprites03公用*/
+.loginWay li>a .wayLogo{
+    background: url(../images/spirites03.png) -9999px -9999px no-repeat;
+}
+/*sprites04公用*/
+.footerIn>.share a{
+    background: url(../images/spirites04.png) -9999px -9999px no-repeat;
+}
+/*头部开始*/
+.headerBg{
+    width: 100%;
+    height: 35px;
+    border-bottom: 1px solid #c4c4c4;
+    background-color: #fafafa;
+}
+.headerIn{
+    height: 35px;
+    margin: 0 auto;
+}
+.headerLeft{
+    float: left;
+}
+.headerLeft,.headerRight{
+    height: 35px;
+    color:#888;
+    line-height:35px;
+    font-size: 12px;
+}
+
+.headerRight{
+    float: right;
+    position: relative;
+}
+.headerRight>li{
+    height: 35px;
+    float: left;
+}
+.headerRight>li>span{
+    padding:0 12px;
+}
+.headerRight>li .login{
+    display: inline-block;
+    background-position: -159px -308px; 
+    padding-right: 10px;
+}
+
+/*登录下拉菜单开始*/
+
+.dropdown{
+    position: absolute;
+    right: 180px;
+    top: 42px;
+    width: 158px;
+    background-color: #fff;
+    border: 1px solid #cfcfcf;
+    display: none;
+    z-index: 9999;
+}
+em{
+    display:block;
+    width: 16px;
+    height: 8px;
+    position: absolute;
+    left: 71px;
+    top: -8px;
+    background:  url(../images/spirites03.png) -286px -325px no-repeat;
+}
+.loginWay li{
+    height: 39px;
+    line-height:39px;
+    margin:0 10px;
+    border-bottom: 1px dotted #cdcdcd;
+    position: relative;
+    padding-left: 41px;
+    box-sizing: border-box;
+}
+.loginWay li:nth-child(5){
+    border-bottom: none;
+}
+.loginWay li>a .wayLogo{
+    width: 18px;
+    height: 17px;
+    background-position: -195px -325px;
+    position: absolute;
+    left: 10px;
+    top: 11px;
+}
+.loginWay li:nth-child(1) .wayLogo{
+    background-position: -195px -304px;
+}
+.loginWay li:nth-child(3) .wayLogo{
+    background-position: -197px -344px;
+}
+.loginWay li:nth-child(4) .wayLogo{
+    background-position: -197px -365px;
+}
+.loginWay li:nth-child(5) .wayLogo{
+    background-position: -194px -426px;
+}
+.headerRight>li:hover .dropdown{
+    display: block;
+}
+/*登录下拉菜单结束*/
+
+/*卷屏S*/
+.scrollScreen{
+    width: 100%;
+    height: 46px;
+    border-bottom: 1px solid rgb(196, 196, 196);
+    background-color: rgb(250, 250, 250);
+    position:fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+.scrollIn{
+    height: 46px;
+}
+.scrollIn h2{
+    /*text-align: center;*/
+    float: left;
+}
+.scrollIn h2 a{
+    display:inline-block;
+    width: 158px;
+    height: 46px;
+    line-height: 46px;
+    text-indent: -9999px;
+    background-position: 0 -342px;
+}
+.scrollIn .nav{
+    float: left;
+    height: 46px;
+}
+.scrollIn .nav li{
+    float: left;
+    height: auto;
+}
+.scrollIn .nav a{
+    height:46px;
+    display:block;
+    padding:0 8px;
+    line-height:46px;
+    font-size: 14px;
+    font-weight: normal;
+}
+.scrollIn .nav li:last-child a{
+    padding-right: 0;
+}
+.scrollIn .searchArea{
+    float: right;
+    width: 235px;
+    height: 30px;
+    overflow: hidden;
+    margin-top: 7px;
+    border: 1px solid  rgb(201, 72, 60);
+}
+.scrollIn input{
+    width: 173px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    color:#868686;
+}
+.scrollIn button{
+    width: 42px;
+    height: 32px;
+    background-position: 0px -399px;
+    cursor: pointer;
+    float: right;
+}
+/*卷屏E*/
+
+/*头部结束*/
+
+/*logo区域S*/
+.logoBg{
+    height: 106px;
+    padding-top: 40px;
+}
+.logoBg h1{
+    width: 194px;
+    height: 36px;
+    float: left;
+}
+.logoBg .logo{
+    display: block;
+    background-position: 0 0;
+    height: 36px;
+    width: 194px;
+    text-indent: -9999px;
+}
+
+.logoBg .searchArea{
+    border: 1px solid #c9483c;
+    float: left;
+    margin:0 98px 0 88px;
+    overflow: hidden;
+}
+.logoBg .searchArea input{
+    width: 346px;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 10px;
+    color:#868686;
+}
+.logoBg .searchArea button{
+    width: 42px;
+    height: 34px;
+    float: right;
+    background-position: 1px -57px;
+    cursor: pointer;
+}
+
+.myZone{
+    width: 201px;
+    height: 36px;
+    float: left;
+}
+.myZone .mySub,.myZone .myShelf{
+    float: left;
+    width: 66px;
+    height: 34px;
+    border: 1px solid #ebe6e1;
+    color:#665555;
+    line-height:34px;
+    font-size:14px;
+    padding-left: 33px;
+}
+.myZone .mySub{
+    background-position: 10px -121px;
+}
+.myZone .myShelf{
+    margin-left: -1px;
+    background-position: 10px -175px;
+}
+.myZone .mySub:hover,.myZone .myShelf:hover{
+    background-color:#f7f7f7;
+}
+/*logo区域E*/
+
+/*导航区域S*/
+.navBg{
+    height: 38px;
+    margin-bottom: 20px;
+}
+.navBg .nav{
+    height: 38px;
+    border-bottom: 2px solid rgb(102, 86, 86); 
+}
+.navBg .nav li{
+    float: left;
+    height: 38px;
+}
+.navBg .nav li a{
+    height:36px;
+    display:block;
+    padding:0 20px;
+    line-height:36px;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid rgb(102, 86, 86);
+}
+.navBg .nav li .homePage,.navBg .nav li a:hover{
+    border-bottom-color: rgb(201, 72, 60);
+}
+/*导航区域E*/
+
+
+
+/*公用尾部区域S*/
+footer{
+    height: 161px;
+    background-color: rgb(250, 250, 250);
+    border-top: 1px solid rgb(238, 238, 238);
+}
+.footerIn{
+    height: 162px;
+    color: rgb(136, 136, 136);
+    position: relative;
+}
+.footerIn a{
+    color: rgb(136, 136, 136);
+}
+.footerLink,.footerIn>p,.footerIn>.share{
+    text-align:center;
+}
+.footerLink{
+    margin-top: 43px;
+    overflow:hidden;
+}
+.footerLink span{
+    padding:0 10px 0 7px;
+}
+.footerIn p{
+    margin:15px 0;
+}
+.footerIn .share>a{
+    display:inline-block;
+    width: 16px;
+    height: 16px;
+    text-indent: -9999px;
+    margin:0 5px;
+}
+
+.footerIn>.share a:nth-child(1){
+    background-position: -17px -40px;
+}
+.footerIn>.share a:nth-child(2){
+    background-position: -49px -40px;
+}
+.footerIn>.share a:nth-child(3){
+    background-position: 0 -40px;
+}
+.footerIn>.share a:nth-child(4){
+    background-position: -33px -40px;
+}
+.footerIn>.share a:nth-child(1):hover{
+    background-position: -17px -59px;
+}
+.footerIn>.share a:nth-child(2):hover{
+    background-position: -49px -59px;
+}
+.footerIn>.share a:nth-child(3):hover{
+    background-position: 0 -59px;
+}
+.footerIn>.share a:nth-child(4):hover{
+    background-position: -33px -59px;
+}
+/*公用尾部区域E*/

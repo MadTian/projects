@@ -1,0 +1,664 @@
+/*主题内容S*/
+
+/*sprites05公用*/
+.catagory h3 i,.hotArticle .support,.hotArticle .share,.hotArticle .text li i,.aboutList li .icon,.aboutList li .share a{
+    background:  url(../images/spirites05.png) -9999px -9999px no-repeat;
+}
+
+/*benner区域S*/
+.bannerBox{
+    height: 380px;
+    /*margin-bottom: 20px;*/
+    overflow:hidden;
+}
+.catagoryBg{
+    width: 236px;
+    height: 376px;
+    float: left;
+    border:2px solid #E0DCD7;  
+    
+}
+.catagory{
+    border-bottom: 1px solid #EBE6E1;
+    padding:14px 20px 0;
+    height: 79px;
+    background-color: #fff;
+    position: relative;
+}
+.catagory h3{
+    font-size:16px;
+    font-weight: bold;
+    color:#4C4C4C;
+    margin-bottom: 5px;
+}
+.catagory h3 i{
+    float: right;
+    width: 4px;
+    height: 9px;
+    background-position: 0 -174px;
+    cursor:pointer;
+}
+.catagory .list{
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+.catagory .list li{
+    float: left;
+    height: 24px;
+    line-height: 24px;
+}
+.catagory .list li span{
+    padding:0 13px 0 10px;
+    color:#B5A1B5;
+}
+.catagory .list li .hot{
+    color: #c9483c;
+}
+.catagory .more{
+    border: 2px solid #DDDDDB;
+    border-left:0 none;
+    padding:40px 26px 12px 24px;
+    width: 235px;
+    height: 97px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 236px;
+    top: -1px;
+    z-index: 9;
+    display: none;
+    background-color: #fff;
+}
+.catagory .more li{
+    height: 24px;
+    line-height:24px;
+    float: left;
+}
+.catagory .more li span{
+    padding:0 8px;
+    color:#B5A1B5;
+}
+.catagory:last-child{
+    border-bottom: none;
+}
+.catagory .subMore{
+    width: 493px;
+}
+.subMore li:nth-child(6),.subMore li:nth-child(16){
+    padding-left: 30px;
+}
+.subMore{
+    padding-right: 8px!important;
+}
+
+.banner{
+    width: 720px;
+    height: 380px;
+    background-color: orange;
+    float: right;
+    position: relative;
+}
+.banner:hover .prevBtn,.banner:hover .nextBtn{
+    display: block;
+}
+.imgList{
+    width: 720px;
+    height: 380px;
+    position: relative;
+}
+.imgList li{
+    width: 720px;
+    height: 380px;
+    float: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+.imgList li:first-child{
+    display: block;
+}
+.prevBtn,.nextBtn{
+    width: 37px;
+    height: 63px;
+    background:  url(../images/arrow.png) 0 0 no-repeat;
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    display: none;
+}
+.prevBtn{
+    left: 20px;
+}
+.nextBtn{
+    right:20px;
+    background-position: 0 -126px;
+}
+.prevBtn:hover{
+    background-position:0 -63px;
+}
+.nextBtn:hover{
+    background-position:0 -189px;
+}
+.btnList{
+    position: absolute;
+    right: 8px;
+    bottom: 20px;
+}
+.btnList li{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    float: left;
+    margin-right: 12px;
+}
+.btnList li.current{
+    background-color: #F7311F;
+}
+/*banner区域E*/
+
+/*推荐书籍*/
+.recSection{
+    margin-top: 20px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.recSection header{
+    height: 56px;
+}
+.recSection header h2{
+    height: 56px;
+    line-height: 56px;
+    float: left;
+    margin-right: 22px;
+}
+.recSection .tabs{
+    width: 130px;
+    height: 56px;
+    float: left;
+}
+.recSection .tabs li{
+    height: 56px;
+    padding-top: 21px;
+    float: left;
+}
+.recSection .tabs a{ 
+    display: inline-block;
+    height: 36px;
+}
+.recSection .tabs span{
+    margin:0 10px;
+    color:#C0A1C0;
+}
+.recSection .tabs a.current{
+    color:#D2483C;
+}
+.recItems{
+    position: relative;
+}
+.recItems .recItem{
+    width: 100%;
+    display: none;
+    border-left: 1px solid #EBE6E1;
+    overflow: hidden;
+}
+.recItems .item01{
+    display: block;
+}
+.recItems .recItem li{
+    height: 160px;
+    padding: 20px;
+    float: left;
+    border: 1px solid #EBE6E1;
+    border-left:0 none;
+    overflow: hidden;
+}
+.recItems .recItem li:nth-child(3),.recItems .recItem li:nth-child(4){
+    border-top: 0 none;
+}
+.recItems .recItem li.bt{
+    border-top: 1px solid #EBE6E1;;
+}
+.recItems .recItem img{
+    float: left;
+    width: 114px;
+    height: 160px;
+    margin-right: 15px;
+}
+.recItems ul>li:hover{
+    background-color: #F5F5F5;
+}
+.book-info{
+    float: left;
+    width: 155px;
+    height: 160px;
+    position: relative;
+}
+.book-info h3{
+    line-height: 22px;
+    font-size:16px;
+    font-weight: bold;
+    color:#4C4C4C;
+}
+.book-info p{
+    line-height: 18px;
+    color:#888;
+}
+.book-info .author{
+    height: 18px;
+    margin:6px 0 5px 0;
+}
+.book-info>a{
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    bottom:-3px;
+}
+.book-info a i{
+    display:inline-block;
+    width: 4px;
+    height: 7px;
+    background: url(../images/more01.png) no-repeat;
+    margin-left: 3px;
+}
+.item03 li .reco{
+    width: 285px;
+    height: 80px;
+    margin-bottom: 18px;
+    position: relative;
+}
+.item03 .reco>a{
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin-right: 16px;
+}
+.item03>li>.reco img{
+    width: 80px;
+    height: 80px;
+}
+.item03 .details{
+    float: left;
+}
+.item03 .details h3 a{
+    font-size: 16px;
+}
+.item03 .details .stars span{
+    display:inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 2px;
+    background:  url(../images/spirites04.png) 0 -100px no-repeat;
+}
+.item03 .details .stars .gray{
+    background-position: -15px -100px;
+}
+.item03 .details .stars i{
+    font-style: normal;
+    color:#959595;
+    margin-left: 26px;
+}
+.item03 .details .read{
+    position: absolute;
+    bottom:-3px;
+    left: 88px;
+    font-weight: bold;
+}
+.item03 .details .read i{
+    display:inline-block;
+    width: 4px;
+    height: 7px;
+    background: url(../images/more01.png) no-repeat;
+    margin-left: 3px;
+}
+.item03 li .article{
+    height: 24px;
+    line-height: 24px;
+}
+.recSection .sec-l{
+    width: 700px;
+    float: left;
+}
+.recSection .sec-l header{
+    width: 100%;
+    float: left;
+}
+.recSection header a.more{
+    display:inline-block;
+    height: 56px;
+    line-height: 56px;
+    float: right;
+    font-size: 13px;
+    color:#888888;
+}
+.recSection header a.more:hover{
+    color:#CE5E4E;
+}
+
+.recItems .bookshelf li{
+    padding-right: 30px;
+}
+.recItems .bookshelf li>.book-info{
+    width: 168px;
+}
+
+.recSection .sec-r{
+    width: 258px;
+    float: right;
+}
+.sec-r .rankList,.sec-r>.more{
+    border: 1px solid #EBE6E1;
+}
+.sec-r .rankList li{
+    border-bottom: 1px solid #EBE6E1;
+}
+.sec-r .rankList li:last-child{
+    border-bottom: 0 none;
+}
+.sec-r>.more{
+    border-top: 0 none;
+}
+.sec-r .rankList .fold,.sec-r>.more{
+    padding-left: 20px;
+    font-size:14px;
+    height: 42px;
+    line-height: 42px;
+    display: block;
+}
+.sec-r .rankList li>.fold.offNow{
+    display: none;
+}
+.sec-r .rankList .fold i{
+    font-style: normal;
+    color:#EBE6E1;
+    padding-right: 16px;
+}
+.sec-r .rankList .unfold{
+    background-color: #fff;
+    padding-left: 20px;
+    padding-top:20px;
+    height: 124px;
+    display: none;
+}
+.sec-r .rankList li>.unfold.onNow{
+    display: block;
+}
+.sec-r .rankList .unfold:hover{
+    background-color: #F5F5F5;
+}
+.sec-r .rankList .unfold i{
+    font-weight: bold;
+    font-family: arial;
+    font-style: normal;
+    color:#CE5E4E;
+    font-size: 18px;
+    float: left;
+}
+.sec-r .rankList .unfold>a{
+    float: left;
+    width: 74px;
+    height: 104px;
+    padding-left:18px;
+    padding-right: 14px;
+}
+.sec-r .rankList .unfold img{
+    width: 74px;
+    height: 104px;
+}
+.sec-r .rankList .unfold h3{
+    font-weight: bold;
+    font-size: 16px;
+    width: 80px;
+    line-height: 22px;
+    max-height: 44px;
+    overflow: hidden;
+}
+.sec-r .rankList .unfold h3 a{
+    color: #4c4c4c;
+    font-weight: bold;
+}
+.sec-r .rankList .unfold p{
+    color: #888;
+    margin-top: 5px;
+}
+
+.sec-r .more i{
+    display:inline-block;
+    width: 16px;
+    height: 9px;
+    background:  url(../images/more02.png) 5px 0px no-repeat;
+}
+.recItems .favBooks{
+    padding: 10px 9px;
+    border: 1px solid #EBE6E1;
+}
+.recItems .favBooks li{
+    width: 114px;
+    height: 235px;
+    float: left;
+    padding: 10px 11px;
+    border: 0 none;
+    overflow: hidden;
+}
+.recItems .favBooks h3{
+    font-size: 16px;
+    line-height: 22px;
+    max-height: 44px;
+    overflow: hidden;
+    margin: 6px 0;
+}
+.recItems li.hotArticle{
+    width: 326px;
+    height:auto;
+    float: left;
+    box-sizing: border-box;
+}
+.recItems .recItem li.hotArticle .hot{
+    display: block;
+    width: 285px;
+    height: 180px;
+    margin-right: 0;
+    float: none;
+}
+.recItems .recItem li.hotArticle h3{
+    font-size: 16px;
+    font-weight: bold;
+    height: 22px;
+    margin:12px 0 3px;
+    overflow: hidden;
+}
+.recItems .recItem li.hotArticle p{
+    line-height: 18px;
+    color:#888;
+}
+.recItems .recItem li.hotArticle .intro{
+    height: 54px;
+    margin:6px 0 10px;
+    overflow: hidden;
+}
+.recItems .recItem li.hotArticle p i{
+    font-style: normal;
+}
+.hotArticle .support{
+    display:inline-block;
+    width: 12px;
+    height: 12px;
+    background-position: 0 -11px;
+}
+.hotArticle .share{
+    display:inline-block;
+    width: 14px;
+    height: 12px;
+    background-position: -15px -10px;
+    margin-left: 15px;
+}
+.recItems .recItem li.textBox{
+    height: 365px;
+    padding:0;
+}
+.hotArticle .text li{
+    height: 73px;
+    width: 326px;
+    border:0 none;
+    border-bottom: 1px solid #EBE6E1 ;
+    padding:17px 0 17px 26px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+.hotArticle .text li:last-child{
+    border-bottom: 0 none;
+}
+.hotArticle .text li a{
+    padding-bottom: 10px;
+    width: 326px;
+    font-size:14px;
+}
+.hotArticle .text li i{
+    display:inline-block;
+    width: 2px;
+    height: 10px;
+    background-position: -40px -10px;
+}
+.recItems li.textBox:hover{
+    background-color: #fff;
+}
+.hotArticle .text li:hover{
+    background-color: #f5f5f5;
+}
+
+/*关于云阅读*/
+.recSection .about{
+    border: 1px solid #f5f5f5;
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+.recSection .aboutList{
+    width: 980px;
+    height:auto;
+}
+.aboutList li{
+    float: left;
+    width: 156px;
+    height: 175px;
+    padding: 16px 20px 6px 67px;
+    border-right: #ebe6e1 solid 1px;
+    position: relative;
+}
+.aboutList li:hover{
+    background-color: #f5f5f5;
+}
+.aboutList li:last-child{
+    border-right:none;
+}
+.aboutList li .icon{
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-position: 0 -25px;
+    position: absolute;
+    left: 17px;
+    top: 20px;
+}
+.aboutList li:nth-child(2) .icon{
+    background-position: -36px -25px;
+}
+.aboutList li:nth-child(3) .icon{
+    background-position: 0 -61px;
+}
+.aboutList li:nth-child(4) .icon{
+    background-position: -36px -61px;
+}
+.aboutList li h3{
+    font-weight: bold;
+    font-size:16px;
+    color:#4c4c4c;
+}
+.aboutList li h6{
+    margin-bottom: 4px;
+}
+.aboutList li .share{
+    color:#888;
+    line-height: 20px;
+}
+.aboutList li .share a{
+    display: inline-block;
+    width: 19px;
+    height: 16px;
+    background-position: -26px -130px;
+    margin-left: 5px;
+}
+.aboutList li .share .weibo{
+    background-position: 0 -130px;
+}
+.aboutList li .share .yixin{
+    background-position: -51px -130px;
+}
+.aboutList li .share a:hover{
+    background:  url(../images/spirites05.png) -26px -150px no-repeat;
+}
+.aboutList li .share .weibo:hover{
+    background-position: 0 -150px;
+}
+.aboutList li .share .yixin:hover{
+    background-position: -51px -150px;
+}
+.aboutList .btn{
+    display: block;
+    width: 74px;
+    height: 22px;
+    border: 1px solid #C9483C;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 22px;
+    color:#C9483C;
+    position: absolute;
+    left: 50%;
+    bottom:22px;
+    transform:translateX(-50%);
+}
+/*主题内容S*/
+
+/*底部分类导航*/
+.navLarge{
+    height: 236px;
+    border-top: 1px solid #eee;
+    background-color: #FAFAFA;
+}
+.navBox{
+    height: 196px;
+    padding:40px 0 55px;
+}
+.nav-list{
+    height: 144px;
+}
+.nav-list li{
+    float: left;
+    padding:0 23px 0 33px;
+    border-right: 1px solid #eee;
+}
+.nav-list li:first-child{
+    padding-left: 0;
+}
+.nav-list li:last-child{
+    border-right: 0 none;
+    padding-right: 0;
+}
+.nav-list li h3{
+    font-size:16px;
+    height:24px;
+    line-height:24px;
+}
+.nav-list li p{
+    width: 115px;
+}
+.nav-list li a{
+    display:inline-block;
+    white-space: nowrap;
+    color:#888;
+    margin-right: 5px;
+    height: 30px;
+    line-height: 30px;
+}

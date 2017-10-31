@@ -1,0 +1,376 @@
+html{
+    /*把根元素的font-size大小设置成和设计稿一样的宽度*/
+    /*如果真的以当前html宽度为基数，基数太大，会导致换算时出现N多小数点，丢失精度*/
+    /*淘宝的做法是：将基数统一缩小10倍*/
+    /*64px不是一个定值，取决于设计稿的宽度*/
+    font-size: 64px;
+}
+html,body,#container{
+    width: 100%;
+    height: 100%;
+}
+// 混入
+
+//定义“动画”的混入
+// animation：关键帧名称 花费时间 运动方式 何时开始 播放次数 是否反方向 是否停在最后一帧；
+.animated(@name,@totalTime:1s,@way:ease,@delayTime:0s,@times:1,@shift:normal,@status:none){
+    -webkit-animation: @name @totalTime @way @delayTime @times @shift @status;
+            animation: @name @totalTime @way @delayTime @times @shift @status;
+}
+
+//定义“水平定位”的混入
+.halfX(@num:-50%){
+    left:50%;
+    -webkit-transform: translateX(@num);
+               -moz-transform: translateX(@num);
+                -ms-transform: translateX(@num);
+                 -o-transform: translateX(@num);
+                    transform: translateX(@num);
+}
+//定义“垂直定位”的混入
+.halfY{
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+         -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+//定义“垂直水平居中”的混入
+.halfXY{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);                
+            transform: translate(-50%,-50%);
+}
+//定义一个公用的关键帧
+@-webkit-keyframes fadein {
+    0% { opacity:0; }
+    100% { opacity:1; }
+}
+@keyframes fadein {
+    0% { opacity:0; }
+    100% { opacity:1; }
+}
+// 文字不透明+旋转 关键帧
+@-webkit-keyframes fadeAndRotate {
+    0% { 
+        opacity:0;
+         -webkit-transform: translateX(-50%) rotate(0deg);
+                 transform: translateX(-50%) rotate(0deg);
+    }
+    100% { 
+        opacity:1; 
+        -webkit-transform: translateX(-50%) rotate(360deg);
+                 transform: translateX(-50%) rotate(360deg);
+    }
+}
+@keyframes fadeAndRotate {
+    0% { 
+        opacity:0;
+         -webkit-transform: translateX(-50%) rotate(0deg);
+                 transform: translateX(-50%) rotate(0deg);
+    }
+    100% { 
+        opacity:1; 
+        -webkit-transform: translateX(-50%) rotate(360deg);
+                 transform: translateX(-50%) rotate(360deg);
+    }
+}
+//定义一个公用的旋转关键帧
+@-webkit-keyframes Rotate{
+    0% { 
+        -webkit-transform:translate(-50%, -50%) rotate(0deg); 
+                transform:translate(-50%, -50%) rotate(0deg); 
+    }
+    100% { 
+        -webkit-transform:translate(-50%, -50%) rotate(360deg);
+        transform:translate(-50%, -50%) rotate(360deg);
+    }
+}
+@keyframes Rotate{
+    0% { 
+        -webkit-transform:translate(-50%, -50%) rotate(0deg); 
+                transform:translate(-50%, -50%) rotate(0deg); 
+    }
+    100% { 
+        -webkit-transform:translate(-50%, -50%) rotate(360deg);
+        transform:translate(-50%, -50%) rotate(360deg);
+    }
+}
+// container模块
+#container{
+    position: relative;
+
+    // 每个li样式书写
+    li{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-position: center center;
+        -webkit-background-size:cover!important;
+        background-size: cover!important;
+        background-color: #D82056;
+        overflow:hidden;
+
+        // 上箭头
+        .arrow{
+            
+            // 定义上箭头动画S
+            @-webkit-keyframes arr-animate {
+                0% { 
+                    opacity:1;
+                    bottom:0;
+                 }
+                100% { 
+                    opacity:0;
+                    bottom:0.15625rem;
+                }
+            }
+            
+            @keyframes arr-animate {
+                0% { 
+                    opacity:1;
+                    bottom:0;
+                 }
+                100% { 
+                    opacity:0;
+                    bottom:1rem;
+                }
+            }
+            // animation：关键帧名称 花费时间 运动方式 何时开始 播放次数 是否反方向；
+            .animated(@name:arr-animate,@totalTime:0.8s,@times:infinite);
+            // 定义上箭头动画E
+            
+            width:1.40625rem;
+            height:0.8125rem;
+            background: url(../images/arr.png) no-repeat;
+            position: absolute;
+            // left: 50%;
+            .halfX;
+            bottom:0;           
+        }
+
+        // 版心盒子第2屏~第4屏皆有
+        .containerIn{
+            width: 100%;
+            height: 11.484375rem;
+            // background-color: red;
+            overflow:hidden;
+            position: absolute;
+            left: 0;
+            // 调用混入
+            .halfY;
+        }
+        
+        // 第1屏
+        &.page1{
+            background:  url(../images/p1.jpg);
+        }
+
+        // 第2屏S
+        &.page2{
+            
+            // 转场动画
+            //第2屏具备comein类名时，tv...
+            &.comein .tv{
+                top: 0;
+            }
+            //第2屏具备comein类名时，.hand1...
+            &.comein .hand1{
+               .animated(fadein,@totalTime:0.5s,@way:ease,@delayTime:0s,@times:infinite,@shift:normal) 
+            }
+
+            //第2屏具备comein类名时，.hand2...
+            &.comein .hand2{
+               .animated(fadein,@totalTime:0.5s,@way:ease,@delayTime:0.2s,@times:infinite,@shift:normal) 
+            }
+
+            //第2屏具备comein类名时，.p2Word...
+            &.comein .p2Word{
+                bottom:0;
+            }
+            .tv{
+                width: 4.1875rem;
+                height: 2.828125rem;
+                // 绝对定位依据最近的已经定位的父元素进行定位，
+                // 若所有父元素皆未定位，则依据body定位
+                position: absolute;
+                // top: 0;
+                top: -2.828125rem;
+                .halfX;
+                -webkit-transition:top 0.5s;
+                transition:top 0.5s;
+            }
+
+            .hand1{
+                height:3.859375rem;
+                width:7.890625rem;
+                position:absolute;
+                top:3.1875rem;
+                left:1.015625rem;
+                opacity:0;
+            }
+
+            .hand2{
+                height:4.5625rem;
+                width:7.921875rem;
+                position:absolute;
+                top:3.75rem;
+                left:0.95rem;
+                opacity:0;
+            }
+            
+            .p2Word{
+                width: 6.1875rem;
+                height: 1.78125rem;
+                position: absolute;
+                bottom:-1.78125rem;
+                // bottom:0;
+                left: 1.875rem;
+                -webkit-transition:bottom 0.5s;
+                transition:bottom 0.5s;
+            }
+        }
+        // 第2屏E
+        
+        // 第3屏S
+        &.page3{
+            // background:  url(../images/p3.jpg);
+            
+            .containerIn *{
+                opacity:0;
+            }
+
+            &.comein .hand{
+                .animated(fadein,@totalTime:0.5s,@status:forwards)
+            }
+            &.comein .p3Img1{
+                .animated(fadein,@totalTime:0.5s,@delayTime:0.1s,@status:forwards)
+            }
+            &.comein .p3Img2{
+                .animated(fadein,@totalTime:0.5s,@delayTime:0.2s,@status:forwards)
+            }
+            &.comein .p3Img3{
+                .animated(fadein,@totalTime:0.5s,@delayTime:0.3s,@status:forwards)
+            }
+            &.comein .p3Img4{
+                .animated(fadein,@totalTime:0.5s,@delayTime:0.4s,@status:forwards)
+            }
+            &.comein .p3Font{
+                .animated(fadeAndRotate,@totalTime:0.5s,@delayTime:0.5s,@status:forwards)
+            }
+            .hand{
+                height:5.53125rem;
+                width:3.25rem;
+                position: absolute;
+                left: 1.71875rem;
+                top: 3.09375rem;
+            }
+            .p3Img1{
+                height: 2.78125rem;
+                width: 2.25rem;
+                position: absolute;
+                left: 1.953125rem;
+                top: 0.21875rem;
+            }
+            .p3Img2{
+                height: 3.234375rem;
+                width: 3.4375rem;
+                position: absolute;
+                left: 4.59375rem;
+                top: 0;
+            }
+            .p3Img3{
+                height: 2.25rem;
+                width: 2.796875rem;
+                position: absolute;
+                left: 6.03125rem;
+                top: 3.875rem;
+            }
+            .p3Img4{
+                height: 1.71875rem;
+                width: 1.609375rem;
+                position: absolute;
+                left: 4.984375rem;
+                top: 6.5rem;
+            }
+            .p3Font{
+                height: 1.65625rem;
+                width: 5.203125rem;
+                position: absolute;
+                .halfX;
+                bottom:0;
+            }
+        }
+
+        // 第4屏S
+        &.page4{
+            
+            //第4屏具备comein，做入场动画...
+            &.comein .p4Up{
+                top: 0;
+            }
+            &.comein .p4Down{
+                bottom: 0;
+            }
+            &.comein .ringBg{
+                .animated(fadein,@totalTime:0.5s,@status:forwards);
+            }
+            // // 圆环中除了GO图标，其他的圈统一做无限次的旋转动画
+            &.comein .ringBg>*:not(.centerRing){
+                .animated(Rotate,@totalTime:0.5s,@way:linear,@times:infinite);
+            }
+
+            .p4Up{
+                width: 8.15625rem;
+                height: 1.828125rem;
+                position: absolute;
+                // top: 0;
+                top: -1.828125rem;
+                .halfX;
+                -webkit-transition: top 0.5s;
+                transition: top 0.5s;
+            }
+            .p4Down{
+                width: 5.65625rem;
+                height: 1.53125rem;
+                position: absolute;
+                // bottom: 0;
+                bottom: -1.53125rem;
+                .halfX;
+                -webkit-transition: bottom 0.5s;
+                transition: bottom 0.5s;
+            }
+            .ringBg{
+                width: 6.03125rem;
+                height: 6.03125rem;
+                opacity: 0;
+
+                *{
+                    .halfXY;
+                } 
+                .centerRing{
+                    width: 3.6875rem;
+                    height: 3.6875rem;
+                }   
+                .smallRing{
+                    width: 4.4375rem;
+                    height: 4.4375rem;
+                }  
+                .middleRing{
+                    width: 5.0625rem;
+                    height: 5.0625rem;
+                }  
+                .bigRing{
+                    width: 6.03125rem;
+                    height: 6.03125rem;
+                }       
+            }
+        }     
+        
+    }
+}

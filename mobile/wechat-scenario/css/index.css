@@ -1,0 +1,351 @@
+html {
+  /*把根元素的font-size大小设置成和设计稿一样的宽度*/
+  /*如果真的以当前html宽度为基数，基数太大，会导致换算时出现N多小数点，丢失精度*/
+  /*淘宝的做法是：将基数统一缩小10倍*/
+  /*64px不是一个定值，取决于设计稿的宽度*/
+  font-size: 64px;
+}
+html,
+body,
+#container {
+  width: 100%;
+  height: 100%;
+}
+.halfY {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.halfXY {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeAndRotate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-50%) rotate(0deg);
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(-50%) rotate(360deg);
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+@keyframes fadeAndRotate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-50%) rotate(0deg);
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(-50%) rotate(360deg);
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+@-webkit-keyframes Rotate {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes Rotate {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+#container {
+  position: relative;
+}
+#container li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-position: center center;
+  -webkit-background-size: cover!important;
+  background-size: cover!important;
+  background-color: #D82056;
+  overflow: hidden;
+}
+#container li .arrow {
+  -webkit-animation: arr-animate 0.8s ease 0s infinite normal none;
+  animation: arr-animate 0.8s ease 0s infinite normal none;
+  width: 1.40625rem;
+  height: 0.8125rem;
+  background: url(../images/arr.png) no-repeat;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 0;
+}
+@-webkit-keyframes arr-animate {
+  0% {
+    opacity: 1;
+    bottom: 0;
+  }
+  100% {
+    opacity: 0;
+    bottom: 0.15625rem;
+  }
+}
+@keyframes arr-animate {
+  0% {
+    opacity: 1;
+    bottom: 0;
+  }
+  100% {
+    opacity: 0;
+    bottom: 1rem;
+  }
+}
+#container li .containerIn {
+  width: 100%;
+  height: 11.484375rem;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+#container li.page1 {
+  background: url(../images/p1.jpg);
+}
+#container li.page2.comein .tv {
+  top: 0;
+}
+#container li.page2.comein .hand1 {
+  -webkit-animation: fadein 0.5s ease 0s infinite normal none;
+  animation: fadein 0.5s ease 0s infinite normal none;
+}
+#container li.page2.comein .hand2 {
+  -webkit-animation: fadein 0.5s ease 0.2s infinite normal none;
+  animation: fadein 0.5s ease 0.2s infinite normal none;
+}
+#container li.page2.comein .p2Word {
+  bottom: 0;
+}
+#container li.page2 .tv {
+  width: 4.1875rem;
+  height: 2.828125rem;
+  position: absolute;
+  top: -2.828125rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: top 0.5s;
+  transition: top 0.5s;
+}
+#container li.page2 .hand1 {
+  height: 3.859375rem;
+  width: 7.890625rem;
+  position: absolute;
+  top: 3.1875rem;
+  left: 1.015625rem;
+  opacity: 0;
+}
+#container li.page2 .hand2 {
+  height: 4.5625rem;
+  width: 7.921875rem;
+  position: absolute;
+  top: 3.75rem;
+  left: 0.95rem;
+  opacity: 0;
+}
+#container li.page2 .p2Word {
+  width: 6.1875rem;
+  height: 1.78125rem;
+  position: absolute;
+  bottom: -1.78125rem;
+  left: 1.875rem;
+  -webkit-transition: bottom 0.5s;
+  transition: bottom 0.5s;
+}
+#container li.page3 .containerIn * {
+  opacity: 0;
+}
+#container li.page3.comein .hand {
+  -webkit-animation: fadein 0.5s ease 0s 1 normal forwards;
+  animation: fadein 0.5s ease 0s 1 normal forwards;
+}
+#container li.page3.comein .p3Img1 {
+  -webkit-animation: fadein 0.5s ease 0.1s 1 normal forwards;
+  animation: fadein 0.5s ease 0.1s 1 normal forwards;
+}
+#container li.page3.comein .p3Img2 {
+  -webkit-animation: fadein 0.5s ease 0.2s 1 normal forwards;
+  animation: fadein 0.5s ease 0.2s 1 normal forwards;
+}
+#container li.page3.comein .p3Img3 {
+  -webkit-animation: fadein 0.5s ease 0.3s 1 normal forwards;
+  animation: fadein 0.5s ease 0.3s 1 normal forwards;
+}
+#container li.page3.comein .p3Img4 {
+  -webkit-animation: fadein 0.5s ease 0.4s 1 normal forwards;
+  animation: fadein 0.5s ease 0.4s 1 normal forwards;
+}
+#container li.page3.comein .p3Font {
+  -webkit-animation: fadeAndRotate 0.5s ease 0.5s 1 normal forwards;
+  animation: fadeAndRotate 0.5s ease 0.5s 1 normal forwards;
+}
+#container li.page3 .hand {
+  height: 5.53125rem;
+  width: 3.25rem;
+  position: absolute;
+  left: 1.71875rem;
+  top: 3.09375rem;
+}
+#container li.page3 .p3Img1 {
+  height: 2.78125rem;
+  width: 2.25rem;
+  position: absolute;
+  left: 1.953125rem;
+  top: 0.21875rem;
+}
+#container li.page3 .p3Img2 {
+  height: 3.234375rem;
+  width: 3.4375rem;
+  position: absolute;
+  left: 4.59375rem;
+  top: 0;
+}
+#container li.page3 .p3Img3 {
+  height: 2.25rem;
+  width: 2.796875rem;
+  position: absolute;
+  left: 6.03125rem;
+  top: 3.875rem;
+}
+#container li.page3 .p3Img4 {
+  height: 1.71875rem;
+  width: 1.609375rem;
+  position: absolute;
+  left: 4.984375rem;
+  top: 6.5rem;
+}
+#container li.page3 .p3Font {
+  height: 1.65625rem;
+  width: 5.203125rem;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 0;
+}
+#container li.page4.comein .p4Up {
+  top: 0;
+}
+#container li.page4.comein .p4Down {
+  bottom: 0;
+}
+#container li.page4.comein .ringBg {
+  -webkit-animation: fadein 0.5s ease 0s 1 normal forwards;
+  animation: fadein 0.5s ease 0s 1 normal forwards;
+}
+#container li.page4.comein .ringBg > *:not(.centerRing) {
+  -webkit-animation: Rotate 0.5s linear 0s infinite normal none;
+  animation: Rotate 0.5s linear 0s infinite normal none;
+}
+#container li.page4 .p4Up {
+  width: 8.15625rem;
+  height: 1.828125rem;
+  position: absolute;
+  top: -1.828125rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: top 0.5s;
+  transition: top 0.5s;
+}
+#container li.page4 .p4Down {
+  width: 5.65625rem;
+  height: 1.53125rem;
+  position: absolute;
+  bottom: -1.53125rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: bottom 0.5s;
+  transition: bottom 0.5s;
+}
+#container li.page4 .ringBg {
+  width: 6.03125rem;
+  height: 6.03125rem;
+  opacity: 0;
+}
+#container li.page4 .ringBg * {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#container li.page4 .ringBg .centerRing {
+  width: 3.6875rem;
+  height: 3.6875rem;
+}
+#container li.page4 .ringBg .smallRing {
+  width: 4.4375rem;
+  height: 4.4375rem;
+}
+#container li.page4 .ringBg .middleRing {
+  width: 5.0625rem;
+  height: 5.0625rem;
+}
+#container li.page4 .ringBg .bigRing {
+  width: 6.03125rem;
+  height: 6.03125rem;
+}

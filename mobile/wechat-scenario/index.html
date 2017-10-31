@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <script type="text/javascript">
+        //动态设置视口标签
+        var iScale=1/window.devicePixelRatio;
+        document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale='+iScale+', maximum-scale='+iScale+', minimum-scale='+iScale+'" />');
+        //动态设置rem基准
+        var oHtml=document.documentElement;
+        //fontSize只认识..px
+        oHtml.style.fontSize=oHtml.clientWidth/10+'px';
+    </script>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<body>
+    <ul id="container"> 
+        <!-- pageSwitch中每个li代表一屏 -->
+        <!-- 第1屏 -->
+        <li class="page1">
+            <div class="arrow"></div>
+        </li>
+
+        <!-- 第2屏S -->
+        <li class="page2">
+            <!-- 版心盒子 containerIn -->
+            <div class="containerIn">
+                <img class="tv" src="images/page2/TV.png" />
+                <img src="images/page2/hand1.png" height="247" width="505" class="hand1" />
+                <img src="images/page2/hand2.png" height="292" width="507"  class="hand2" />
+                <img src="images/page2/word.png" height="114" width="396"  class="p2Word" />
+            </div>
+            <div class="arrow"></div>
+        </li>
+        <!-- 第2屏E -->
+
+        <!-- 第3屏S -->
+        <li class="page3">
+            <div class="containerIn">
+                <img src="images/page3/hand.png" height="354" width="208" class="hand" />
+                <img src="images/page3/1.png" height="178" width="144"  class="p3Img1" />
+                <img src="images/page3/2.png" height="207" width="220" alt="" class="p3Img2" />
+                <img src="images/page3/3.png" height="144" width="179" alt="" class="p3Img3" />
+                <img src="images/page3/4.png" height="110" width="103" alt="" class="p3Img4" />
+                <img src="images/page3/word-down.png" height="106" width="333" class="p3Font" />
+            </div>
+            <div class="arrow"></div>
+        </li>
+        <!-- 第3屏E -->
+
+        <!-- 第4屏S -->
+        <li class="page4">
+            <div class="containerIn">
+                <div class="ringBg">
+                    <img src="images/page4/GO.png" class="centerRing" />
+                    <img src="images/page4/smallCircle.png" class="smallRing" />
+                    <img src="images/page4/middleCircle.png" class="middleRing" />
+                    <img src="images/page4/bigCircle.png" class="bigRing"/>
+                </div>
+                <img src="images/page4/word-up.png" class="p4Up" />
+                <img src="images/page4/word-down.png" class="p4Down" />
+            </div>
+            <div class="arrow"></div>
+        </li>
+        <!-- 第4屏E -->
+    </ul>
+    
+    <script type="text/javascript" src="js/jquery-3.1.0.slim.min.js"></script>
+    <!-- 在页面当中引入pageSwitch.js -->
+    <script type="text/javascript" src="js/pageSwitch.min.js"></script>
+    <script type="text/javascript">
+
+        var aLi=$('#container li');
+        var pages = new pageSwitch('container');
+        var pw=new pageSwitch('container',{
+            duration:600,           //int 页面过渡时间
+            direction:1,            //int 页面切换方向，0横向，1纵向
+            start:0,                //int 默认显示页面
+            loop:true,             //bool 是否循环切换
+            ease:'ease',            //string|function 过渡曲线动画，详见下方说明
+            transition:'slide',     //string|function转场方式，详见下方说明
+            freeze:false,           //bool 是否冻结页面（冻结后不可响应用户操作，可以通过 `.freeze(false)` 方法来解冻）
+            mouse:true,             //bool 是否启用鼠标拖拽
+            mousewheel:false,       //bool 是否启用鼠标滚轮切换
+            arrowkey:true,         //bool 是否启用键盘方向切换
+            autoplay:false,         //bool 是否自动播放幻灯 新增
+            interval:0              //int 幻灯播放时间间隔 新增
+        });
+
+        pw.on('after',function(index){
+            // $('.page3').addClass('comein');
+            // alert(index);
+            // index代表即将去往的屏
+            aLi.eq(index).addClass('comein').siblings('comein');
+        });
+    </script>
+</body>
+</html>

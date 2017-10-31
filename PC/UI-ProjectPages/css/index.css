@@ -1,0 +1,586 @@
+@charset "utf-8";
+/* CSS 初始化 */
+html,body,div,span,a,h1,h2,h3,h4,h5,h6,ul,li,ol,dl,dt,dd,img,p{
+	padding:0;
+	margin:0;
+}
+
+li{
+	list-style:none;
+}
+
+a{
+	text-decoration:none;
+}
+
+img{
+	border:0 none;
+}
+
+/* 清除浮动 */
+.clearfix:after{
+	content:"";
+	clear:both;
+	display:block;
+}
+
+.clearfix{
+	zoom:1;
+}
+
+/* 左浮和右浮 */
+.left{
+	float:left;
+}
+
+.right{
+	float:right;
+}
+
+body{
+	font-family:微软雅黑;
+}
+
+/* 版心 */
+.container{
+	width:1180px;
+	margin:0 auto;
+	position:relative;
+}
+
+/*顶部开始*/
+.top{
+	height:66px;
+	background:#00091e;
+}
+
+.top h1{
+	/*width:200px;
+	height:200px;*/
+	/*background:pink;*/
+	margin:11px 0 0 5px;
+}
+
+.top h1 a{
+	width:273px;
+	height:44px;
+	background:url(../images/logo.png) no-repeat;
+	text-indent:-9999px;
+	display:block;
+}
+
+.top .contact{
+	/*width:200px;
+	height:200px;*/
+	/*background:pink;*/
+	margin-top:18px;
+}
+
+.top span{
+	height:30px;
+	background:url(../images/tel.png) no-repeat;
+	display:block;
+	padding-left:116px;
+	line-height:30px;
+	font-family:Arial;
+	font-size:26px;
+	color:#fff;
+}
+
+.top .contact a{
+	width:30px;
+	height:30px;
+	background:url(../images/wechat.png) no-repeat;
+	display:block;
+	text-indent:-9999px;
+	margin:0 2px;
+}
+
+.top a.qq{
+	background-image:url(../images/qq.png);
+}
+
+.top a.wechat{
+	margin-left:10px;
+}
+
+/*顶部结束*/
+
+/*banner开始*/
+.banner{
+	/*text-align:center;*/
+	position:relative;
+	overflow:hidden;
+	height:600px;
+}
+.banner img{
+	position:absolute;
+	left:50%;
+	margin-left:-959px;
+}
+
+/*banner开始*/
+
+/*完美开始*/
+.perfect{
+	height:565px;
+	background:#f9f9f9;
+	text-align:center;
+	padding-top:35px;
+}
+
+.perfect h2{
+	/*margin-top:35px;*/
+	height:58px;
+	color:#333;
+	font-size:40px;
+	font-weight:bold;
+}
+
+.perfect h2 span{
+	color:#0e62c0;
+}
+
+.perfect .process{
+	color:#666;
+	height:51px;
+}
+
+.perfect ul{
+	margin-top:37px;
+}
+
+.perfect li{
+	width:25%;
+	float:left;
+	background:url(../images/line.png) no-repeat right center;
+}
+
+.perfect li div{
+	font-size:0;
+}
+
+.perfect .salary{
+	width:20px;
+	height:27px;
+	background:#84b991;
+	display:inline-block;
+	font-size:12px;
+	color:#fff;
+	line-height:12px;
+	padding-top:2px;
+	/*vertical-align:middle;*/
+	position:relative;
+	top:-3px;
+	margin-right:10px;
+}
+
+.perfect .money{
+	font-family:Arial;
+	font-size:36px;
+	color:#23a645;
+	/*background:#ccc;*/
+	/*vertical-align:middle;*/
+}
+
+.perfect h3{
+	font-size:24px;
+	color:#2e2e2e;
+	font-weight:bold;
+	height:35px;
+}
+
+.perfect li p{
+	line-height:20px;
+	font-size:12px;
+	color:#666;
+	padding:0 37px;
+	text-align:left;
+}
+
+.perfect li.last{
+	background:none;
+}
+/*完美结束*/
+
+
+/*年薪最高开始*/
+.dream{
+	height:204px;
+	background:#004a88;
+	text-align:center;
+	padding-top:34px;
+	/*margin-bottom:100px;*/
+	position:relative;
+}
+
+.dream .come-true{
+	font-size:20px;
+	color:#88a8cb;
+	height:40px;
+}
+
+.dream .come-true strong{
+	font-weight:normal;
+	color:#fff;
+}
+
+.dream .highest{
+	color:#fff;
+	font-size:40px;
+	height:70px;
+}
+
+.dream .highest em{
+	font-style:normal;
+	font-size:60px;
+	font-family:Arial;
+	font-weight:700;
+	margin-left:11px;
+	/*vertical-align:middle;*/
+	position:relative;
+	top:3px;
+}
+
+.dream .income{
+	color:#88a8cb;
+	font-size:14px;
+	height:36px;
+}
+
+.dream .how{
+	width:184px;
+	height:32px;
+	line-height:32px;
+	border:2px solid #fff;
+	display:inline-block;
+	color:#fff;
+	font-size:20px;
+	font-weight:700;
+}
+
+.dream .arrow{
+	width:0;
+	height:0;
+	border:15px solid transparent;
+	border-top-color:red;
+	border-bottom:0 none;
+	position:absolute;
+	bottom:-15px;
+	left:50%;
+	margin-left:-15px;
+}
+/*年薪最高结束*/
+
+/*课程体系开始*/
+.lesson{
+	height:294px;
+	text-align:center;
+	padding-top:69px;
+}
+
+.lesson .design{
+	font-size:26px;
+	color:#333;
+	font-weight:bold;
+	height:47px;
+}
+
+.lesson .green{
+	color:#347a0a;
+}
+
+.lesson .blue{
+	color:#0557b4;
+}
+
+.lesson .purple{
+	color:#b01bab;
+}
+
+.lesson .red{
+	color:#fd3636;
+}
+
+.lesson .software{
+	color:#666;
+	height:72px;
+}
+/*课程体系结束*/
+
+
+/*火爆开始*/
+.hot{
+	height:312px;
+	background:#fff9fa url(../images/hot.png) no-repeat center 33px;
+	position:relative;
+}
+
+.hot img{
+	position:absolute;
+	left:50%;
+	margin-left:-232px;
+	bottom:-54px;
+}
+/*火爆结束*/
+
+/*介绍开始*/
+.product{
+	height:179px;
+	background:#ce1634;
+	padding-top:109px;
+}
+
+.product li{
+	width:255px;
+	background:url(../images/art.png) no-repeat;
+	height:116px;
+	padding-left:138px;
+}
+
+.product h2{
+	color:#fff;
+	font-weight:bold;
+	font-size:16px;
+	height:30px;
+}
+
+.product p{
+	line-height:20px;
+	color:rgba(255,255,255,0.5);
+	font-size:12px;
+	padding-right:75px;
+}
+
+/*介绍结束*/
+
+/*超值开始*/
+.super{
+	height:150px;
+	background:#f7f7f7 url(../images/service.png) no-repeat center 27px;
+	text-align:center;
+	padding-top:450px;
+	position:relative;
+}
+
+.super h2{
+	color:#6f1d45;
+	font-size:36px;
+	font-weight:700;
+}
+
+.super span{
+	color:#2f3272;
+}
+
+.super p{
+	color:#2e2e2e;
+}
+
+.super a{
+	width:108px;
+	height:41px;
+	background:#f34d5e url(../images/echo.png) no-repeat 43px center;
+	/*display:block;*/
+	border-radius:15px 15px 2px 2px;
+	line-height:41px;
+	color:#fff;
+	font-size:18px;
+	position:absolute;
+	left:50%;
+	margin-left:-95px;
+	bottom:0;
+	text-align:left;
+	padding-left:81px;
+}
+
+/*超值结束*/
+
+
+/*真正的课程体系开始*/
+.system{
+	/*height:1000px;*/
+	background:pink;
+	padding-top:37px;
+}
+
+.system h2{
+	text-align:center;
+	color:#f34d5e;
+	font-size:40px;
+	font-weight:bold;
+	margin-bottom:110px;
+}
+
+.system h3{
+	width:226px;
+	height:31px;
+	line-height:31px;
+	text-align:center;
+	border:2px solid #6847e4;
+	border-radius:20px;
+	font-size:20px;
+	color:#6847e4;
+	font-weight:bold;
+	margin:0 auto;
+	position:relative;
+}
+
+.system h3 span{
+	width:65px;
+	height:90px;
+	background:url(../images/01.png) no-repeat;
+	position:absolute;
+	left:50%;
+	margin-left:-32px;
+	/*top:-90px;*/
+	bottom:33px;
+}
+
+.system .bd{
+	height:495px;
+	background:yellowgreen;
+}
+
+.system .bd-l{
+	width:515px;
+	background:skyblue;
+	padding:40px 0 0 75px;
+}
+
+.system .bd-r{
+	width:589px;
+	border-left:1px solid red;
+	background:deepskyblue;
+	height:437px;
+	padding-top:58px;
+}
+
+.system .bd-r li{
+	background:url(../images/ps.png) no-repeat 46px center;
+	padding-left:140px;
+	margin-bottom:40px;
+	position:relative;
+}
+
+.system h4{
+	font-weight:700;
+	font-size:18px;
+	color:#333;
+}
+
+.system p{
+	line-height:20px;
+	font-size:14px;
+	color:#666;
+}
+
+.system s{
+	width:8px;
+	height:8px;
+	border:2px solid #6847e4;
+	/*display:block;*/
+	border-radius:50%;
+	position:absolute;
+	left:-6px;
+	background:#fff;
+	top:50%;
+	margin-top:-6px;
+}
+
+.system .change .bd-l{
+	width:493px;
+    /*padding:40px 0 0 75px;*/
+	padding:57px 0 0 97px;
+}
+
+.system .change .bd-r{
+	border-right:1px solid red;
+	border-left:0 none;
+}
+
+.system .change li{
+	background-position:476px center;
+	padding-right:145px;
+	padding-left:0;
+	text-align:right;
+}
+
+.system .change s{
+	right:-6px;
+	left:auto;
+}
+/*真正的课程体系结束*/
+
+/*超强师资开始*/
+.teacher{
+	height:446px;
+	text-align:center;
+	background:#242434 url(../images/ui_15.png) no-repeat center 43px;
+	padding-top:149px;
+	color:#fff;
+}
+
+.teacher .from{
+	height:24px;
+}
+
+.teacher .experience{
+	color:#ffea00;
+	font-size:18px;
+	font-weight:700;
+	height:30px;
+}
+
+.teacher .master{
+	font-size:14px;
+	height:24px;
+}
+
+.teacher .english{
+	color:rgba(255,255,255,0.22);
+	line-height:20px;
+	font-size:12px;
+	margin-bottom:45px;
+}
+
+.teacher li{
+	width:196px;
+}
+
+.teacher li div{
+	width:174px;
+	height:174px;
+	/*background:red;*/
+	border-radius:50%;
+	margin:0 auto 18px;
+	cursor:pointer;
+}
+
+.teacher li div:hover{
+	background:red;
+}
+
+.teacher img{
+	position:relative;
+	top:-18px;
+}
+
+.teacher h2{
+	font-weight:700;
+	font-size:16px;
+	height:25px;
+}
+
+.teacher li p{
+	font-size:14px;
+	color:rgba(255,255,255,0.53);
+}
+/*超强师资结束*/
+
+
+
+
+
+
+

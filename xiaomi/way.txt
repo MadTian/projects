@@ -1,0 +1,43 @@
+
+acer@acer-PC MINGW64 /e/myGithub/xiaomi (master)
+$ git init 
+Reinitialized existing Git repository in E:/myGithub/xiaomi/.git/
+
+acer@acer-PC MINGW64 /e/myGithub/xiaomi (master)
+$ git add .
+warning: LF will be replaced by CRLF in jquery-1.12.4.min.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in xiaomi.html.
+The file will have its original line endings in your working directory.
+
+acer@acer-PC MINGW64 /e/myGithub/xiaomi (master)
+$ git commit -m "init"
+[master (root-commit) 470020b] init
+ 14 files changed, 139 insertions(+)
+ create mode 100644 images/mi1.png
+ create mode 100644 images/mi10.png
+ create mode 100644 images/mi2.png
+ create mode 100644 images/mi3.png
+ create mode 100644 images/mi4.png
+ create mode 100644 images/mi5.png
+ create mode 100644 images/mi6.png
+ create mode 100644 images/mi7.png
+ create mode 100644 images/mi8.png
+ create mode 100644 images/mi9.png
+ create mode 100644 images/open.gif
+ create mode 100644 images/p1.png
+ create mode 100644 jquery-1.12.4.min.js
+ create mode 100644 xiaomi.html
+
+acer@acer-PC MINGW64 /e/myGithub/xiaomi (master)
+$ git push origin master
+Counting objects: 17, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (17/17), 184.65 KiB | 10.26 MiB/s, done.
+Total 17 (delta 0), reused 0 (delta 0)
+To https://github.com/TianTina2/xiaomi.git
+ * [new branch]      master -> master
+
+acer@acer-PC MINGW64 /e/myGithub/xiaomi (master)
+$

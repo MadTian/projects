@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            list-style: none;
+        }
+        body{
+            background-color: #257CCB;
+            height: 1000px;
+        }
+        .list{
+            width: 1230px;
+            margin: 50px auto 0;
+        }
+        .list li{
+            width: 234px;
+            height: 300px;
+            margin: 0 15px 15px 0;
+            float: left;
+            position: relative;
+            overflow: hidden;
+        }
+        .bottomDiv{
+            width: 234px;
+            height: 76px;
+            background: url(images/p1.png);
+            position: absolute;
+            left: 0;
+            bottom: -76px;
+            /* opacity: 0.1; */
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            
+            //jq reset
+            $('.list li:eq(4),.list li:eq(9)').css('margin-right',0);
+            $('.bottomDiv').css('opacity', 0.1);
+
+            var aLi=$('.list li');
+
+            aLi.hover(function() {
+                
+                //让当前这个LI做一个-5px的向上偏移
+                //向上偏移一定要使用top，因为相对定位的元素灵魂走了，肉体还在，不会出现小间隙，导致某一个LI底部不对齐
+                $(this).stop().animate({
+                    'top':-5
+                }, 200);
+
+                //让当前这个LI下面的bottomDiv的bottom值动画到0
+                //同时还需要将bottomDiv的不透明度动画到1
+                $(this).children('.bottomDiv').stop().animate({
+                    'bottom': 0,
+                    'opacity':1
+                }, 200);
+
+
+
+            }, function() {
+                
+                //鼠标离开时，让当前这个LI的向上偏移还原
+                $(this).stop().animate({
+                    'top':0
+                }, 200);
+
+
+                //鼠标离开时，将当前这个LI下面的bottomDiv的bottom值还原成-76
+                //同时还需要将bottomDiv的不透明度还原到0.1
+                $(this).children('.bottomDiv').stop().animate({
+                    'bottom': -76,
+                    'opacity': 0.1
+                }, 200);
+
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+    
+    <ul class="list">
+        <li>
+            <img src="images/mi1.png" height="300" width="234" />
+            <div class="bottomDiv"></div>
+        </li>
+        <li>
+            <img src="images/mi2.png" height="300" width="234" />
+            <div class="bottomDiv"></div>
+        </li>
+        <li>
+            <img src="images/mi3.png" height="300" width="234" />
+            <div class="bottomDiv"></div>
+        </li>
+        <li>
+            <img src="images/mi4.png" height="300" width="234" />
+            <div class="bottomDiv"></div>
+        </li>
+        <li>
+            <img src="images/mi5.png" height="300" width="234" />
+            <div class="bottomDiv"></div>
+        </li>
+        <li>
+            <img src="images/mi6.png" height="300" width="234" />
+            <div class="bottomDiv"></div>
+        </li>
+        <li>
+            <img src="images/mi7.png" height="300" width="234" />
+            <div class="bottomDiv"></div>
+        </li>
+        <li>
+            <img src="images/mi8.png" height="300" width="234" />
+            <div class="bottomDiv"></div>
+        </li>
+        <li>
+            <img src="images/mi9.png" height="300" width="234" />
+            <div class="bottomDiv"></div>
+        </li>
+        <li>
+            <img src="images/mi10.png" height="300" width="234" />
+            <div class="bottomDiv"></div>
+        </li>
+    </ul>
+
+
+</body>
+</html>

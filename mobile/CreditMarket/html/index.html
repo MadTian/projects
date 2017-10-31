@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <script type="text/javascript">
+        //动态设置视口标签
+        var iScale=1/window.devicePixelRatio;
+        document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale='+iScale+', maximum-scale='+iScale+', minimum-scale='+iScale+'" />');
+
+        //动态设置rem基准
+        var oHtml=document.documentElement;
+        //fontSize只认识..px
+        oHtml.style.fontSize=oHtml.clientWidth/10+'px';
+    </script>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <script type="text/javascript" src="../js/TouchSlide.1.1.js"></script>
+</head>
+<body>
+    
+    <!-- Banner S -->
+    <div id="focus" class="focus">
+        <!-- 角标 -->
+        <div class="hd">
+            <ul></ul>
+        </div>
+        <div class="bd">
+            <ul>
+                <li><a href="javascript:;"><img src="../images/banner.png" /></a></li>
+                <li><a href="javascript:;"><img src="../images/banner.png" /></a></li>
+                <li><a href="javascript:;"><img src="../images/banner.png" /></a></li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        TouchSlide({ 
+            slideCell:"#focus",
+            titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+            mainCell:".bd ul", 
+            effect:"left", 
+            autoPlay:true,//自动播放
+            autoPage:true //自动分页
+        });
+    </script>
+    <!-- Banner E -->
+
+    <!-- 导航S -->
+    <ul class="nav">
+        <li>
+            <div><span>我的商城</span> <br /> 立即登录查看</div>
+        </li>
+        <li>
+            <div><span>摇摇签到</span> <br /> 今天可以签到3次</div>
+        </li>
+    </ul>
+    <!-- 导航E -->
+
+    <!-- 限时抢购S -->
+    <ul class="limit">
+        <li>
+            <span>限时抢兑</span>
+            <i>163金币+1元</i> <br />
+            新西兰佳沛奇异果
+        </li>
+        <li>
+            <div>
+                <span>抽奖</span><br />
+                自动咖啡茶饮机<br />
+                <i>20金币</i>
+            </div>
+        </li>
+        <li>
+            <div>
+                <span>特卖</span><br />
+                亲热天堂<br />
+                <i>20金币</i>
+            </div>
+        </li>
+    </ul>
+    <!-- 限时抢购E -->
+    
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+/*css reset*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, em, img, strong, b, u, i, dl, dt, dd, ol, ul, li, form, label, table, tbody, thead, tr, th, td,{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+ol, ul { 
+  list-style: none; 
+}
+img { 
+  border: 0;
+}
+section,header,article,nav {
+  display: block;
+}
+body {
+  margin: 1em auto;
+  background:  url(../images/background.gif) top left repeat-x fixed;
+  max-width: 80em;
+}     
+header {
+  background:  url(../images/guitarist.gif)  bottom right no-repeat;
+  border-width: .1em;
+  border-style: solid;
+  border-bottom-width:0;
+}
+header nav {
+  background:  url(../images/navbar.gif) bottom left repeat-x;
+  border-width: .1em;
+  border-style: solid;
+  border-bottom-width:0;
+  border-top-width:0;
+  padding-left: 10%;
+}
+header nav ul {
+  width: 100%;
+  border-left-width: .1em;
+  border-left-style: solid;
+  overflow: hidden;
+}
+header nav li {
+  float: left;
+}
+header nav li a{
+  display: inline-block;
+  padding:.5em 2em;
+  border-right: 0.1em solid;
+}
+article {
+  border-width: 0.1em;
+  border-style: solid;
+  border-top-width: 0;
+  padding:2em 10%;
+  line-height:1.8em;
+}
+article img {
+  border-width: .1em;
+  border-style: solid;
+  outline-width: .1em;
+  outline-style:solid;
+}
+
+/*为不同页面的头部应用不同的背景图像*/
+#about header {
+  background-image: url(../images/lineup.gif);
+}
+#photos header {
+  background-image: url(../images/basshead.gif);
+}
+#live header {
+  background-image: url(../images/bassist.gif);
+}
+#contact header {
+  background-image: url(../images/drummer.gif);
+}
+
+/*首页幻灯片*/
+#slideshow {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+}
+#preview {
+  position: absolute;
+  border-width: 0;
+  outline-width: 0;
+}
+#imagegallery li{
+  display:inline;
+}
+
+/*Live*/
+td {
+  padding:.5em 3em;
+}
+dl {
+  overflow: hidden;
+}
+dt,dd {
+  float: left;
+}
+abbr {
+  text-decoration: none;
+  border: 0 none;
+  font-style: normal;
+}
+
+/*Contact*/
+label {
+  display: block;
+}
+fieldset {
+  border: 0;
+}
